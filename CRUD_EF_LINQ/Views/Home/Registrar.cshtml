@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Nuevo Registro</h1>
+
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label for="Descripcion" class="form-label">Descripción del Producto</label>
+            <input type="text" class="form-control" id="Descripcion" name="Descripcion" required>
+        </div>
+        <div class="mb-3">
+            <label for="Precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="Precio" name="Precio" step="0.01" required>
+        </div>
+        <div class="mb-3">
+            <label for="Stock" class="form-label">Stock</label>
+            <input type="number" class="form-control" id="Stock" name="Stock" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Volver a la lista</a>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+CRUD LINQ with TAILWINDCSS
+---------------------------
+dotnet new mvc -o "Nombre del proyecto"
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet build
+
+CONFIGURACION DE EF EN VISUAL STUDIO CODE
+-----------------------------------------
+dotnet-ef dbcontext scaffold "Server=JONATHAN; DataBase= VentaLINQ; Trusted_Connection=true; TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context VentasDbContext --no-build
+
+CONFIGURACION DE EF EN VISUAL STUDIO
+------------------------------------
+Scaffold-DbContext "Server=JONATHAN; DataBase=VentaLINQ; Trusted_Connection=true; TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context VentasDbContext
+
+
+CONFIGURACION DE TAILWINDCSS
+----------------------------
+https://www.youtube.com/watch?v=vWHc65BoIsA&list=PLpxfmck0s8lxgCq7NvHwLg5eohDsC0U3v
+npm init
+npm install tailwindcss postcss autoprefixer postcss-cli
+npx tailwindcss init
+npm run buildcss
+
+
+
+
+
+
+

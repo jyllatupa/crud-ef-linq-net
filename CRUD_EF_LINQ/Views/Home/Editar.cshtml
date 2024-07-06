@@ -1,0 +1,31 @@
+﻿@model CRUD_EF_LINQ.Models.ProductsViewModel;
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<form asp-action="Update" method="post">
+    <div class="mb-3">
+        <label for="CodProducto" class="form-label">Codigo</label>
+        <input type="text" class="form-control" id="CodProducto" name="CodProducto" value="@Model.productoVM.CodProducto">
+    </div>
+    <div class="mb-3">
+        <label for="Descripcion" class="form-label">Descripcion Producto</label>
+        <input type="text" class="form-control" id="Descripcion" name="Descripcion" value="@Model.productoVM.Descripcion">
+    </div>
+    <div class="mb-3">
+        <label for="Precio" class="form-label">Precio</label>
+        <input type="text" class="form-control" id="Precio" name="Precio" value="@Model.productoVM.Precio">
+    </div>
+    <div class="mb-3">
+        <label for="Stock" class="form-label">Stock</label>
+        <input type="text" class="form-control" id="Stock" name="Stock" value="@Model.productoVM.Stock">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
